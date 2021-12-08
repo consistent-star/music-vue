@@ -1,0 +1,42 @@
+@import "var.scss";
+@import "global.scss";
+
+.song-list {
+  margin: 30px 150px;
+  margin-top: 0;
+  padding-top: $header-height;
+  padding-bottom: 50px;
+  min-width: 800px;
+  background-color: $color-white;
+}
+
+.song-list-header {
+  width: 100%;
+  height: 34px;
+  background-color:#C20C0C;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    line-height: 20px;
+    padding:3px 10px;
+    margin: 4px 20px ;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color:white;
+    cursor: pointer;
+  }
+  li.active {
+    background-color: #a40011;
+  }
+}
+
+.pagination {
+  @include layout(center);
+  transform: translateY(15px);
+  .el-pager li.active {
+    color :#C20C0C !important;
+    cursor: default;
+  }
+}

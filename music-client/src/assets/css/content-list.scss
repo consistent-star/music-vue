@@ -1,0 +1,158 @@
+@import "var.scss";
+@import "global.scss";
+
+.content-list {
+  min-height: 500px;
+  padding: 0 20px;
+  .section-content {
+    @include layout(flex-start, stretch, row, wrap);
+  }
+}
+
+.content-item {
+  width: 18%;
+  margin: 20px 1%;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  &:hover .item-img {
+    transform: scale(1.1);
+  }
+  .item-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 10px 8px;
+  }
+}
+
+.item-img {
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+.kuo,
+.mask {
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  background-color: rgba(52, 47, 41, 0.4);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  @include layout(center);
+  > .icon {
+    position: absolute;
+    top: 40%;
+  }
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.icon {
+  @include icon(2em, rgba(240, 240, 240, 1));
+}
+
+
+.ThemeCoverWrapper{
+  cursor: pointer;
+  width: 140px;
+  margin: 20px 0 ;
+  width: 18%;
+  margin: 20px 1%;
+  overflow: hidden;
+  
+  .item-name {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .cover-top {
+    position: relative;
+
+    &>img {
+      width: 100%;
+      height: 186px;
+      object-fit:cover;
+    }
+    
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: 0 0;
+
+      .el-icon-video-play::before{
+        position: absolute;
+        right: 8px;
+        bottom: 3px;
+        color:white;
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-position: 0 -537px;
+        background-color: #333;
+        opacity: 0.7;
+        color: #ccc;
+        height: 27px;
+
+        .erji {
+          margin-right: 5px;
+          display: inline-block;
+          width: 14px;
+          height: 11px;
+          background-position: 0 -24px;
+        }
+
+        .play {
+          display: inline-block;
+          width: 16px;
+          height: 17px;
+          background-position: 0 0;
+        }
+      }
+    }
+    
+  }
+
+  .cover-bottom {
+    position: relative;
+    font-size: 14px;
+    color: #000;
+    margin-top: 5px;
+    .el-icon-user-solid::before{
+      position: absolute;
+      right: 10px;
+      top: 0px;
+      font-size: 16px;
+      color:#C20C0C;
+    }
+  }
+
+  .cover-source {
+    color: #666;
+  }
+}

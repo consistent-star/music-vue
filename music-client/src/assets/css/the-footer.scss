@@ -1,0 +1,30 @@
+@import "var.scss";
+@import "global.scss";
+
+.the-footer {
+  width: 100%;
+  height: $footer-height;
+  background-color: #242424;
+  margin-bottom: 60px;
+  @include layout(center, center, column);
+  p {
+    height: 30px;
+  }
+}
+
+.FooterLeft{
+  padding-top: 15px;
+  line-height: 24px;
+
+    span {
+      font-size:14px;
+      color: #ccc;
+      margin-right: 15px;
+    }
+    a{
+      text-decoration: none;
+      font-size:14px;
+      color: #ccc;
+      margin-right: 15px;
+    }
+}
